@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E55B72C72A10081F0008A8D7 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55B72C62A10081F0008A8D7 /* SplashView.swift */; };
+		E55B72CA2A100B0B0008A8D7 /* OnboardingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55B72C92A100B0B0008A8D7 /* OnboardingStepView.swift */; };
+		E55B72CD2A1013DB0008A8D7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55B72CC2A1013DB0008A8D7 /* OnboardingView.swift */; };
 		E5D1B00F2A0EA3C4007995D5 /* FMovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D1B00E2A0EA3C4007995D5 /* FMovieApp.swift */; };
 		E5D1B0112A0EA3C4007995D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D1B0102A0EA3C4007995D5 /* ContentView.swift */; };
 		E5D1B0132A0EA3C5007995D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5D1B0122A0EA3C5007995D5 /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E55B72C62A10081F0008A8D7 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		E55B72C92A100B0B0008A8D7 /* OnboardingStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepView.swift; sourceTree = "<group>"; };
+		E55B72CC2A1013DB0008A8D7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		E5D1B00B2A0EA3C4007995D5 /* FMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D1B00E2A0EA3C4007995D5 /* FMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMovieApp.swift; sourceTree = "<group>"; };
 		E5D1B0102A0EA3C4007995D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +38,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E55B72C32A1007D20008A8D7 /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				E55B72C62A10081F0008A8D7 /* SplashView.swift */,
+			);
+			path = SplashView;
+			sourceTree = "<group>";
+		};
+		E55B72C82A100ADD0008A8D7 /* OnboardingStepView */ = {
+			isa = PBXGroup;
+			children = (
+				E55B72C92A100B0B0008A8D7 /* OnboardingStepView.swift */,
+			);
+			path = OnboardingStepView;
+			sourceTree = "<group>";
+		};
+		E55B72CB2A1013C90008A8D7 /* OnboardingView */ = {
+			isa = PBXGroup;
+			children = (
+				E55B72CC2A1013DB0008A8D7 /* OnboardingView.swift */,
+			);
+			path = OnboardingView;
+			sourceTree = "<group>";
+		};
 		E5D1B0022A0EA3C4007995D5 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +109,9 @@
 		E5D1B01D2A0EA43B007995D5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E55B72CB2A1013C90008A8D7 /* OnboardingView */,
+				E55B72C82A100ADD0008A8D7 /* OnboardingStepView */,
+				E55B72C32A1007D20008A8D7 /* SplashView */,
 				E5D1B01F2A0EA455007995D5 /* MainView */,
 			);
 			path = Views;
@@ -170,7 +203,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5D1B0112A0EA3C4007995D5 /* ContentView.swift in Sources */,
+				E55B72CA2A100B0B0008A8D7 /* OnboardingStepView.swift in Sources */,
 				E5D1B00F2A0EA3C4007995D5 /* FMovieApp.swift in Sources */,
+				E55B72CD2A1013DB0008A8D7 /* OnboardingView.swift in Sources */,
+				E55B72C72A10081F0008A8D7 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

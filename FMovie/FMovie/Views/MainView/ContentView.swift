@@ -8,15 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var initialState: String = "splash"
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        if initialState == "splash" {
+            SplashView()
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        initialState = "onboarding"
+                    }
+                }
+        } else {
+            OnboardingView()
         }
-        .padding()
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
