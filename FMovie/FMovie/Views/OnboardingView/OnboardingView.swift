@@ -12,12 +12,17 @@ struct OnboardingView: View {
     @State private var selectedTabIndex: Int = 0
     
     private let onboardingData: [(String, String)] = [
-        ("Step1", "onboarding1"),
-        ("Step2", "onboarding2"),
-        ("Step3", "onboarding3"),
-        ("Step4", "onboarding4"),
-        ("Step5", "onboarding5"),
-        ("Step6", "onboarding6")
+        ("All your favourite MARVEL Movies & Series at one place",
+         "onboarding1"),
+        ("Watch Online or Download Offline",
+         "onboarding2"),
+        ("Create profiles for diffrent members & get personalised recommendations",
+         "onboarding3"),
+        ("Plans according to your needs at affordable prices",
+         "onboarding4"),
+        ("Let’s Get Started !!!",
+         "onboarding5"),
+        ("", "onboarding6")
     ]
     
     var body: some View {
