@@ -20,6 +20,11 @@ struct SplashView: View {
             
             Image("marvelLogo")
         }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + visibilityDuration) {
+                appViewModel.sceneType = .onboarding
+            }
+        }
     }
     
 }
