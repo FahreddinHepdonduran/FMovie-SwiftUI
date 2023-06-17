@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct SplashView: View {
+    
+    @EnvironmentObject private var appViewModel: AppViewModel
+    
+    private let visibilityDuration: CGFloat = 2.0
+    
     var body: some View {
         ZStack {
             Color.black
@@ -16,6 +21,7 @@ struct SplashView: View {
             Image("marvelLogo")
         }
     }
+    
 }
 
 struct SplashView_Previews: PreviewProvider {

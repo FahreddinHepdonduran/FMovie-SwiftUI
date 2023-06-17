@@ -7,12 +7,16 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
 @main
 struct FMovieApp: App {
+    
+    @StateObject private var appViewModel = AppViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(appViewModel)
         }
     }
+    
 }

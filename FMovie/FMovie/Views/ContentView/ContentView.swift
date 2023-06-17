@@ -9,18 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var initialState: String = "splash"
+    @EnvironmentObject private var appViewModel: AppViewModel
     
     var body: some View {
-        if initialState == "splash" {
+        switch appViewModel.sceneType {
+        case .splash:
             SplashView()
-                .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                        initialState = "onboarding"
-                    }
-                }
-        } else {
+        case .onboarding:
             OnboardingView()
+        case .login:
+            LoginView()
+        case .signup:
+            SignupView()
         }
     }
     
@@ -29,5 +29,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(AppViewModel())
     }
 }

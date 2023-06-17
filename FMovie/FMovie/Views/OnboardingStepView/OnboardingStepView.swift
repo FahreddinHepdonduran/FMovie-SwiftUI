@@ -9,11 +9,12 @@ import SwiftUI
 
 struct OnboardingStepView: View {
     
+    @EnvironmentObject private var appViewModel: AppViewModel
+    
     var title: String = ""
     var imageName: String = ""
     var isLast: Bool = false
     var currentIndex: Int = 0
-    var continueAction: ((_ index: Int) -> Void)?
     
     var body: some View {
         ZStack {
@@ -48,7 +49,7 @@ struct OnboardingStepView: View {
                 if isLast {
                     VStack(spacing: 20.0) {
                         Button(action: {
-                            print("Signup")
+                            appViewModel.sceneType = .signup
                         }) {
                             Text("Signup")
                                 .frame(width: 300.0, height: 50.0, alignment: .center)
@@ -57,7 +58,7 @@ struct OnboardingStepView: View {
                         .foregroundColor(Color.white)
                         
                         Button(action: {
-                            print("Login")
+                            appViewModel.sceneType = .login
                         }) {
                             Text("Login")
                                 .frame(width: 300.0, height: 50.0, alignment: .center)
@@ -77,7 +78,7 @@ struct OnboardingStepView: View {
                     Spacer()
                     
                     Button(action: {
-                        continueAction?(currentIndex + 1)
+                        appViewModel.selectedOnboardingTabIndex = currentIndex + 1
                     }) {
                         Text("Continue")
                             .frame(width: 300.0, height: 50.0, alignment: .center)
