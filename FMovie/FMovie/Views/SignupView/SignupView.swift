@@ -99,7 +99,7 @@ struct SignupView: View {
                         Button {
                             appViewModel.sceneType = .login
                         } label: {
-                            Text("Already Have An Account? Login")
+                            Text("Already have an account? Login")
                                 .foregroundColor(Color.white.opacity(0.5))
                         }
                     }
