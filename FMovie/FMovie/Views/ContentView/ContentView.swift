@@ -21,6 +21,8 @@ struct ContentView: View {
             LoginView()
         case .signup:
             SignupView()
+        case .home:
+            TabbedView()
         }
     }
     

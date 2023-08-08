@@ -16,6 +16,9 @@
 		E524F18D2A3F477E0095ABF1 /* FormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524F18C2A3F477E0095ABF1 /* FormValidatorTests.swift */; };
 		E524F18F2A3F4B030095ABF1 /* FormValidationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524F18E2A3F4B030095ABF1 /* FormValidationViewModel.swift */; };
 		E524F1922A3F50C80095ABF1 /* FormValidationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524F1912A3F50C80095ABF1 /* FormValidationViewModelTests.swift */; };
+		E543C2C62A8103C500CB0604 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E543C2C52A8103C500CB0604 /* HomeView.swift */; };
+		E543C2C82A8103E700CB0604 /* TabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E543C2C72A8103E700CB0604 /* TabbedView.swift */; };
+		E543C2CA2A811C8400CB0604 /* TabItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E543C2C92A811C8400CB0604 /* TabItems.swift */; };
 		E55B72C72A10081F0008A8D7 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55B72C62A10081F0008A8D7 /* SplashView.swift */; };
 		E55B72CA2A100B0B0008A8D7 /* OnboardingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55B72C92A100B0B0008A8D7 /* OnboardingStepView.swift */; };
 		E55B72CD2A1013DB0008A8D7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55B72CC2A1013DB0008A8D7 /* OnboardingView.swift */; };
@@ -46,6 +49,9 @@
 		E524F18C2A3F477E0095ABF1 /* FormValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidatorTests.swift; sourceTree = "<group>"; };
 		E524F18E2A3F4B030095ABF1 /* FormValidationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidationViewModel.swift; sourceTree = "<group>"; };
 		E524F1912A3F50C80095ABF1 /* FormValidationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidationViewModelTests.swift; sourceTree = "<group>"; };
+		E543C2C52A8103C500CB0604 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E543C2C72A8103E700CB0604 /* TabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedView.swift; sourceTree = "<group>"; };
+		E543C2C92A811C8400CB0604 /* TabItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItems.swift; sourceTree = "<group>"; };
 		E55B72C62A10081F0008A8D7 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		E55B72C92A100B0B0008A8D7 /* OnboardingStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepView.swift; sourceTree = "<group>"; };
 		E55B72CC2A1013DB0008A8D7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -125,6 +131,30 @@
 			path = FormValidationViewModelTests;
 			sourceTree = "<group>";
 		};
+		E543C2C32A81039700CB0604 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				E543C2C52A8103C500CB0604 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		E543C2C42A8103A400CB0604 /* TabbedView */ = {
+			isa = PBXGroup;
+			children = (
+				E543C2C72A8103E700CB0604 /* TabbedView.swift */,
+			);
+			path = TabbedView;
+			sourceTree = "<group>";
+		};
+		E543C2CB2A811C9600CB0604 /* TabItems */ = {
+			isa = PBXGroup;
+			children = (
+				E543C2C92A811C8400CB0604 /* TabItems.swift */,
+			);
+			path = TabItems;
+			sourceTree = "<group>";
+		};
 		E55B72C32A1007D20008A8D7 /* SplashView */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				E524F1852A3F45580095ABF1 /* FormValidator */,
+				E543C2CB2A811C9600CB0604 /* TabItems */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -234,6 +265,8 @@
 		E5D1B01D2A0EA43B007995D5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E543C2C42A8103A400CB0604 /* TabbedView */,
+				E543C2C32A81039700CB0604 /* HomeView */,
 				E50B7BD42A2F82350036DE85 /* LoginView */,
 				E5D1B01F2A0EA455007995D5 /* ContentView */,
 				E55B72C82A100ADD0008A8D7 /* OnboardingStepView */,
@@ -373,15 +406,18 @@
 			files = (
 				E524F1872A3F45710095ABF1 /* FormValidator.swift in Sources */,
 				E50B7BD92A2F82970036DE85 /* LoginView.swift in Sources */,
+				E543C2C62A8103C500CB0604 /* HomeView.swift in Sources */,
 				E50B7BD12A2F793B0036DE85 /* SceneType.swift in Sources */,
 				E5D1B0112A0EA3C4007995D5 /* ContentView.swift in Sources */,
 				E50B7BD32A2F79780036DE85 /* AppViewModel.swift in Sources */,
 				E55B72CA2A100B0B0008A8D7 /* OnboardingStepView.swift in Sources */,
 				E5D1B00F2A0EA3C4007995D5 /* FMovieApp.swift in Sources */,
+				E543C2C82A8103E700CB0604 /* TabbedView.swift in Sources */,
 				E524F18F2A3F4B030095ABF1 /* FormValidationViewModel.swift in Sources */,
 				E55B72CD2A1013DB0008A8D7 /* OnboardingView.swift in Sources */,
 				E524F18A2A3F46270095ABF1 /* FormValidationRegex.swift in Sources */,
 				E50B7BD72A2F82590036DE85 /* SignupView.swift in Sources */,
+				E543C2CA2A811C8400CB0604 /* TabItems.swift in Sources */,
 				E55B72C72A10081F0008A8D7 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

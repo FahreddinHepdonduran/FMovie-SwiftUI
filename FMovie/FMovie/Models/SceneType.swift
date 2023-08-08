@@ -12,4 +12,5 @@ enum SceneType {
     case onboarding
     case login
     case signup
+    case home
 }

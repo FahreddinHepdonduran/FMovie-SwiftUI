@@ -28,7 +28,7 @@ final class AppViewModelTests: XCTestCase {
     
     func testSceneTypePublisher() throws {
         let expectation = XCTestExpectation(description: "Scene type publisher test")
-        let expectedValues: [SceneType] = [.splash, .onboarding, .login, .signup, .splash]
+        let expectedValues: [SceneType] = [.splash, .onboarding, .login, .signup, .splash, .home]
         var receivedValues: [SceneType] = []
         
         sut.$sceneType

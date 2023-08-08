@@ -40,7 +40,7 @@ struct LoginView: View {
                         
                         VStack(alignment: .trailing, spacing: 15.0) {
                             Button {
-                                print("Login")
+                                appViewModel.sceneType = .home
                             } label: {
                                 Text("Login")
                                     .frame(width: 330.0, height: 50.0)
