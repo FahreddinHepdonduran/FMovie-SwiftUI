@@ -15,128 +15,144 @@ struct HomeView: View {
         "onboarding3"
     ]
     
+    @State private var showDetails = false
+    
     var body: some View {
-        ZStack {
-            Color("homeBackground")
-                .edgesIgnoringSafeArea(.all)
-            
-            ScrollView(.vertical) {
-                VStack {
-                    HStack  {
-                        Spacer(
-                            minLength: (UIScreen.main.bounds.size.width / 2) - 50.0
-                        )
-                        
-                        Image("marvelLogo")
-                            .resizable()
-                            .frame(
-                                width: 100.0,
-                                height: 45.0
+        NavigationStack {
+            ZStack {
+                Color("homeBackground")
+                    .edgesIgnoringSafeArea(.all)
+                
+                ScrollView(.vertical) {
+                    VStack {
+                        HStack  {
+                            Spacer(
+                                minLength: (UIScreen.main.bounds.size.width / 2) - 50.0
                             )
-                        
-                        Spacer()
-                        
-                        Button {
-                            print("profile")
-                        } label: {
-                            Image("profile-icon")
+                            
+                            Image("marvelLogo")
                                 .resizable()
                                 .frame(
-                                    width: 70.0,
-                                    height: 70.0
+                                    width: 100.0,
+                                    height: 45.0
                                 )
-                        }
-                        .padding(.trailing)
-                    }
-                    
-                    Spacer()
-                        .frame(
-                            height: 30.0
-                        )
-                    
-                    VStack {
-                        HStack {
-                            Text("Latest Movies")
-                                .foregroundColor(.white)
-                                .bold()
-                                .font(Font.system(size: 24.0))
-                                .padding(.leading)
                             
                             Spacer()
-                        }
-                        
-                        ScrollView(.horizontal) {
-                            HStack(spacing: 10.0) {
-                                ForEach(posters, id: \.self) { imgName in
-                                    Image(imgName)
-                                        .resizable()
-                                        .frame(
-                                            height: 173.0
-                                        )
-                                }
+                            
+                            Button {
+                                print("profile")
+                            } label: {
+                                Image("profile-icon")
+                                    .resizable()
+                                    .frame(
+                                        width: 70.0,
+                                        height: 70.0
+                                    )
                             }
-                            .padding(.horizontal)
-                        }
-                    }
-                    
-                    VStack {
-                        HStack {
-                            Text("Latest Series")
-                                .foregroundColor(.white)
-                                .bold()
-                                .font(Font.system(size: 24.0))
-                                .padding(.leading)
-                            
-                            Spacer()
+                            .padding(.trailing)
                         }
                         
-                        ScrollView(.horizontal) {
+                        Spacer()
+                            .frame(
+                                height: 30.0
+                            )
+                        
+                        VStack {
                             HStack {
-                                ForEach(posters, id: \.self) { imgName in
-                                    Image(imgName)
-                                        .resizable()
-                                        .frame(
-                                            height: 173.0
-                                        )
-                                }
+                                Text("Latest Movies")
+                                    .foregroundColor(.white)
+                                    .bold()
+                                    .font(Font.system(size: 24.0))
+                                    .padding(.leading)
+                                
+                                Spacer()
                             }
-                            .padding(.horizontal)
-                        }
-                    }
-                    
-                    VStack {
-                        HStack {
-                            Text("Trending Today")
-                                .foregroundColor(.white)
-                                .bold()
-                                .font(Font.system(size: 24.0))
-                                .padding(.leading)
                             
-                            Spacer()
+                            ScrollView(.horizontal) {
+                                HStack(spacing: 10.0) {
+                                    ForEach(posters, id: \.self) { imgName in
+                                        Image(imgName)
+                                            .resizable()
+                                            .frame(
+                                                height: 173.0
+                                            )
+                                    }
+                                }
+                                .padding(.horizontal)
+                            }
                         }
                         
-                        ScrollView(.horizontal) {
+                        VStack {
                             HStack {
-                                ForEach(posters, id: \.self) { imgName in
-                                    Image(imgName)
-                                        .resizable()
-                                        .frame(
-                                            width: 100.0,
-                                            height: 150.0
-                                        )
-                                }
+                                Text("Latest Series")
+                                    .foregroundColor(.white)
+                                    .bold()
+                                    .font(Font.system(size: 24.0))
+                                    .padding(.leading)
+                                
+                                Spacer()
                             }
-                            .padding(.horizontal)
+                            
+                            ScrollView(.horizontal) {
+                                HStack {
+                                    ForEach(posters, id: \.self) { imgName in
+                                        Image(imgName)
+                                            .resizable()
+                                            .frame(
+                                                height: 173.0
+                                            )
+                                    }
+                                }
+                                .padding(.horizontal)
+                            }
                         }
+                        
+                        VStack {
+                            HStack {
+                                Text("Trending Today")
+                                    .foregroundColor(.white)
+                                    .bold()
+                                    .font(Font.system(size: 24.0))
+                                    .padding(.leading)
+                                
+                                Spacer()
+                            }
+                            
+                            ScrollView(.horizontal) {
+                                HStack {
+                                    ForEach(posters, id: \.self) { imgName in
+                                        Button(action: presentMovieDetail) {
+                                            Image(imgName)
+                                                .resizable()
+                                                .frame(
+                                                    width: 100.0,
+                                                    height: 150.0
+                                                )
+                                        }
+                                    }
+                                }
+                                .padding(.horizontal)
+                            }
+                        }
+                        
+                        Spacer()
+                            .frame(
+                                height: 100.0
+                            )
                     }
-                    
-                    Spacer()
-                        .frame(
-                            height: 100.0
-                        )
                 }
             }
         }
+        .navigationDestination(
+            isPresented: $showDetails
+        )
+        {
+            MovieDetailView()
+        }
+    }
+    
+    func presentMovieDetail() {
+        showDetails.toggle()
     }
     
 }
